@@ -1,16 +1,18 @@
 body {
-  margin: 0;
-  background-color: #0b132b;
-  font-family: serif;
-  color: #fff;
+  font-family: sans-serif;
+  background-color: #f7f2e8;
+  text-align: center;
+  padding: 20px;
 }
 
-/* 상태바 */
-.status-bar {
+h1 {
+  margin-bottom: 10px;
+}
+
+#statusBar {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
-  background-color: #000;
+  margin-bottom: 20px;
 }
 
 .status {
@@ -18,40 +20,45 @@ body {
 }
 
 .bar {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 2px;
+  display: flex;
+  gap: 4px;
   margin-top: 5px;
+  justify-content: center;
 }
 
 .bar div {
-  height: 12px;
-  background-color: #333;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #333;
+  background-color: white;
 }
 
 .bar .filled {
-  background-color: #fca311;
-}
-
-/* 게임 화면 */
-.game {
-  text-align: center;
-  padding: 20px;
+  background-color: orange;
 }
 
 #sceneImage {
-  max-width: 100%;
-  height: 200px;
-  background-color: #222;
-  margin-bottom: 20px;
+  width: 80%;
+  max-width: 400px;
+  margin: 15px 0;
 }
 
-#choices button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
+#story {
+  font-size: 18px;
+  white-space: pre-line;
+  margin: 20px 0;
 }
 
-.hidden {
-  display: none;
+#choices button,
+#startBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.gameover {
+  color: red;
+  font-size: 32px;
+  font-weight: bold;
 }
