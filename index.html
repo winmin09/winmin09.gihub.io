@@ -3,12 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>옛날옛날에</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f7f2e8;
+      text-align: center;
+      padding: 30px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #story {
+      margin-top: 30px;
+      font-size: 20px;
+      white-space: pre-line;
+    }
+
+    #choices {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
 
-  <button id="startBtn" style="font-size:20px;">이야기 시작</button>
+  <h1>옛날옛날에</h1>
 
+  <!-- 시작 버튼 -->
+  <button id="startBtn">이야기 시작</button>
+
+  <!-- 스토리 텍스트 -->
+  <p id="story"></p>
+
+  <!-- 선택지 버튼 영역 -->
+  <div id="choices"></div>
+
+  <!-- 자바스크립트 -->
   <script src="script.js"></script>
+
 </body>
 </html>
