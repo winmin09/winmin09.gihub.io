@@ -1,64 +1,112 @@
 body {
-  font-family: sans-serif;
-  background-color: #f7f2e8;
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  margin-bottom: 10px;
-}
-
-#statusBar {
+  margin: 0;
+  background: #2a2a2a;
+  font-family: "DungGeunMo", monospace;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 게임 박스 */
+#game {
+  width: 360px;
+  background: #f3eddc;
+  border: 4px solid #333;
+  box-shadow: 0 0 0 4px #bfae8f;
+}
+
+/* 상태바 */
+#statusBar {
+  padding: 10px;
+  border-bottom: 4px solid #333;
 }
 
 .status {
-  width: 45%;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
 .bar {
   display: flex;
-  gap: 4px;
-  margin-top: 5px;
-  justify-content: center;
+  gap: 3px;
+  margin-top: 4px;
 }
 
 .bar div {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 10px;
+  background: #ddd;
   border: 1px solid #333;
-  background-color: white;
 }
 
-.bar .filled {
-  background-color: orange;
+#fullnessBar .filled {
+  background: #f4c430;
 }
 
-#sceneImage {
-  width: 80%;
-  max-width: 400px;
-  margin: 15px 0;
+#crueltyBar .filled {
+  background: #c0392b;
+}
+
+/* 장면 */
+#scene {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-bottom: 4px solid #333;
+  overflow: hidden;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+#character {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  height: 120px;
+  image-rendering: pixelated;
+}
+
+/* 스토리 */
+#storyBox {
+  padding: 12px;
+  border-bottom: 4px solid #333;
 }
 
 #story {
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 1.6;
   white-space: pre-line;
-  margin: 20px 0;
+}
+
+/* 선택지 */
+#choices {
+  padding: 10px;
 }
 
 #choices button,
 #startBtn {
-  padding: 12px 20px;
-  font-size: 16px;
-  margin: 8px;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  background: #e2d5b5;
+  border: 3px solid #333;
+  font-size: 14px;
   cursor: pointer;
 }
 
+#choices button:hover,
+#startBtn:hover {
+  background: #d1c29c;
+}
+
 .gameover {
-  color: red;
-  font-size: 32px;
-  font-weight: bold;
+  color: darkred;
+  font-size: 20px;
+  text-align: center;
 }
