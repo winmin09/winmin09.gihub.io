@@ -7,8 +7,17 @@
 </head>
 <body>
 
+  <body>
+
+  <!-- 타이틀 화면 -->
+  <div class="container" id="titleScreen">
+    <h1>옛날옛날에</h1>
+    <p class="subtitle">해와 달이 된 오누이</p>
+    <button id="startBtn">이야기 시작</button>
+  </div>
+
   <!-- 상태바 -->
-  <div class="status-bar">
+  <div class="status-bar hidden" id="statusBar">
     <div class="status">
       <span>포만감</span>
       <div class="bar" id="fullnessBar"></div>
@@ -19,6 +28,15 @@
     </div>
   </div>
 
+  <!-- 게임 화면 -->
+  <div class="game hidden" id="gameScreen">
+    <img id="sceneImage" src="" alt="">
+    <p id="storyText"></p>
+    <div id="choices"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
   <!-- 게임 화면 -->
   <div class="game">
     <img id="sceneImage" src="" alt="">
