@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const crueltyBar = document.getElementById("crueltyBar");
   const story = document.getElementById("story");
   const choices = document.getElementById("choices");
-  const sceneImage = document.getElementById("sceneImage");
+  const character = document.getElementById("character");
   const startBtn = document.getElementById("startBtn");
 
   function updateBars() {
@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function showScene(text, image, options = []) {
+  function show(text, charImg, options = []) {
     story.className = "";
     story.textContent = text;
-    sceneImage.src = image || "";
+    character.src = charImg || "";
     choices.innerHTML = "";
 
     options.forEach(opt => {
@@ -44,19 +44,18 @@ document.addEventListener("DOMContentLoaded", () => {
   startBtn.onclick = () => {
     startBtn.style.display = "none";
 
-    showScene(
-      "옛날옛날에,\n엄마와 오누이는 초가집에 살고 있었어요.\n\n어느 날 엄마는 시장에 가다 산에서 호랑이를 만납니다.",
-      "",
+    show(
+      "옛날옛날에,\n엄마는 시장에 가기 위해\n산을 넘고 있었어요.\n\n그때 호랑이를 만났습니다.",
+      "images/tiger.png",
       [
         {
           text: "엄마를 잡아먹는다",
           action: () => {
             fullness += 10;
             cruelty += 10;
-
-            showScene(
-              "호랑이는 엄마를 잡아먹고 그녀로 변장했습니다.\n초가집으로 향합니다.",
-              "",
+            show(
+              "호랑이는 엄마를 잡아먹고\n엄마로 변장했습니다.\n초가집으로 향합니다.",
+              "images/mother.png",
               []
             );
           }
@@ -65,8 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
           text: "잡아먹지 않는다",
           action: () => {
             story.classList.add("gameover");
-            showScene(
-              "GAME OVER\n\n흥, 이번만 봐주지.\n호랑이는 굴로 돌아가 후회하다 굶어 죽었습니다.",
+            show(
+              "GAME OVER\n\n흥, 이번만 봐주지.\n호랑이는 굴로 돌아가\n후회하다 굶어 죽었습니다.",
               "",
               []
             );
