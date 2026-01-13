@@ -1,7 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startBtn");
+alert("script.js 로드 성공");
 
-  startBtn.onclick = () => {
-    alert("버튼 눌림 확인!");
-  };
-});
+document.getElementById("startBtn").onclick = () => {
+  alert("버튼 클릭됨");
+};
