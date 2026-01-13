@@ -7,32 +7,38 @@
 </head>
 <body>
 
-  <h1>옛날옛날에</h1>
+<div id="game">
 
   <!-- 상태바 -->
   <div id="statusBar">
     <div class="status">
-      <span>포만감</span>
+      배고픔
       <div class="bar" id="fullnessBar"></div>
     </div>
     <div class="status">
-      <span>잔인함</span>
+      잔인함
       <div class="bar" id="crueltyBar"></div>
     </div>
   </div>
 
-  <!-- 이미지 -->
-  <img id="sceneImage" src="" alt="" />
+  <!-- 배경 + 캐릭터 -->
+  <div id="scene">
+    <img id="background" src="images/mountain.png">
+    <img id="character" src="">
+  </div>
 
   <!-- 스토리 -->
-  <p id="story"></p>
+  <div id="storyBox">
+    <p id="story"></p>
+  </div>
 
   <!-- 선택지 -->
   <div id="choices"></div>
 
-  <!-- 시작 버튼 -->
   <button id="startBtn">이야기 시작</button>
 
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
