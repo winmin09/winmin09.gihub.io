@@ -7,23 +7,41 @@
 </head>
 <body>
 
-<div id="game">
+<!-- 메인 화면 -->
+<div id="mainMenu">
+  <h1>옛날옛날에</h1>
+  <button id="startBtn">이야기 시작하기</button>
+</div>
 
+<!-- 게임 화면 -->
+<div id="game" class="hidden">
+
+  <!-- 상태바 -->
   <div id="statusBar">
-    <div class="status">배고픔<div class="bar" id="fullnessBar"></div></div>
-    <div class="status">잔인함<div class="bar" id="crueltyBar"></div></div>
+    <div class="status">
+      배고픔
+      <div class="bar" id="fullnessBar"></div>
+    </div>
+    <div class="status">
+      잔인함
+      <div class="bar" id="crueltyBar"></div>
+    </div>
   </div>
 
+  <!-- 장면 이미지 -->
   <div id="scene">
-    <img id="background" src="">
+    <img id="sceneImage" src="">
   </div>
 
+  <!-- 스토리 -->
   <div id="storyBox">
     <p id="story"></p>
   </div>
 
+  <!-- 선택 / 다음 -->
   <div id="choices"></div>
 
+  <!-- 엔딩 -->
   <div id="ending"></div>
 
 </div>
